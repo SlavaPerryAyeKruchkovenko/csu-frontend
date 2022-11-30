@@ -2,7 +2,7 @@ import React from 'react';
 
 import cat from '@Assets/images/cat.jpg';
 
-import './styles.css';
+import './styles.less';
 
 const Main = () => (
     <div className="main-page">
