@@ -10,7 +10,7 @@ import App from './src/App';
 
 import '@Styles/global.less';
 import '@Styles/reset.css';
-import '@Styles/tachyons.min.cs';
+import '@Styles/tachyons.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('app-root'));
 
