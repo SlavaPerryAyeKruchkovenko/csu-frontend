@@ -10,7 +10,7 @@ const Header = () => {
                 <nav className="menu">
                     <div className="sub-menu">
                         <img src={logo} className="logo" />
-                        <span className="separator">|</span>
+                        <div className="separator" />
                         <a className="info-link" href="#">
                             Курьерская служба доставки
                         </a>
@@ -20,12 +20,9 @@ const Header = () => {
                             <img src={phone} />
                             <span className="phone">8 (909) 023-12-51</span>
                         </a>
-                        <button className="log-in-btn">Вход</button>
+                        <button className="log-in-btn pointer">Вход</button>
                     </div>
                 </nav>
-                <div>
-                    <h1>Срочная доставка день в день</h1>
-                </div>
             </div>
         </header>
     );
