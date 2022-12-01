@@ -1,7 +1,5 @@
 import React from 'react';
 
-import cat from '@Assets/images/cat.jpg';
-
 import './admin.less';
 
 const Admin = () => (
