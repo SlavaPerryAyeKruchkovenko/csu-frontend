@@ -11,16 +11,16 @@ const Header = () => {
                     <div className="sub-menu">
                         <img src={logo} className="logo" />
                         <div className="separator" />
-                        <a className="info-link" href="#">
+                        <span className="info-link">
                             Курьерская служба доставки
-                        </a>
+                        </span>
                     </div>
                     <div className="sub-menu">
-                        <a href="#" className="phone-link">
+                        <a href="tel: +79090231251" className="phone-link">
                             <img src={phone} />
                             <span className="phone">8 (909) 023-12-51</span>
                         </a>
-                        <button className="log-in-btn pointer">Вход</button>
+                        <button className="log-in-btn">Вход</button>
                     </div>
                 </nav>
             </div>
