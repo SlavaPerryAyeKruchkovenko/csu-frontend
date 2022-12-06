@@ -1,21 +1,65 @@
 .container-slider {
+  display: flex;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .slide {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity ease-in-out 0.4s;
+  position: absolute;
+  transform: translate(-100%);
+  height: 612px;
+  display: flex;
+  transition: ease-in-out 0.4s;
+  padding: 0 135px 0 135px;
+
+  .text-flow{
+      display: flex;
+      flex-direction: column;
+      color: #FFFFFF;
+      justify-content: center;
+      margin-top: 35px;
+      font-family: 'Proxima Nova';
+      .text-title{
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 64px;
+      }
+      .text-description{
+          margin-top: 18px;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: left;
+      }
+      .delivery-btn{
+          border:none;
+          margin-top: 87px;
+          line-height: 22px;
+          font-size: 18px;
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          color: #2A4F71;
+          cursor: pointer;
+          background: #E5E31F;
+          border-radius: 10px;
+          width: 240px;
+      }
+  }
 }
 .slide img {
-  object-fit: cover;
+  //object-fit: cover;
 }
 .active-anim {
-  opacity: 1;
+  position: relative;
+  transform: translate(0);
 }
-
+.next-slide{
+  transform: translate(100%);
+}
+.unboard-slide{
+  padding: 0 0 0 135px;
+}
 .btn-slide {
   width: 60px;
   height: 60px;

@@ -3,11 +3,13 @@ export default class Slide {
     _title;
     _description;
     _image;
-    constructor(id, title, description, image) {
+    _needPadding;
+    constructor(id, title, description, image, needPadding) {
         this._id = id;
         this._title = title;
         this._description = description;
         this._image = image;
+        this._needPadding = needPadding;
     }
 
     get id() {
@@ -21,5 +23,8 @@ export default class Slide {
     }
     get image() {
         return this._image;
+    }
+    get needPadding() {
+        return this._needPadding;
     }
 }
