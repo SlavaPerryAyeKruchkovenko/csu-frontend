@@ -8,14 +8,14 @@ const Header = () => {
         <header className="header">
             <div className="header-block">
                 <nav className="menu">
-                    <div className="sub-menu">
+                    <div className="sub-menu left-menu">
                         <img src={logo} className="logo" />
                         <div className="separator" />
                         <span className="info-link">
                             Курьерская служба доставки
                         </span>
                     </div>
-                    <div className="sub-menu">
+                    <div className="sub-menu wrapper">
                         <a href="tel: +79090231251" className="phone-link">
                             <img src={phone} />
                             <span className="phone">8 (909) 023-12-51</span>
