@@ -7,22 +7,16 @@ const Slider = (props) => {
 
     const [slide, setSlide] = useState(sliders[0]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const interval = setInterval(() => {
             let index = _.findLastIndex(sliders, (x) => x.id === slide.id) + 1;
-            console.log(index);
             nextSlide(index);
         }, 5000);
         return () => clearInterval(interval); //This is important
-    }, [slide, setSlide]);
+    }, [slide, setSlide]);*/
 
     const nextSlide = (index) => {
-        //
-        if (index === sliders.length) {
-            index = 0;
-        }
-
-        setSlide(sliders[index]);
+        setSlide(sliders[index === sliders.length ? 0 : index]);
     };
     return (
         <div className="container-slider">
