@@ -7,13 +7,13 @@ const Slider = (props) => {
 
     const [slide, setSlide] = useState(sliders[0]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         const interval = setInterval(() => {
             let index = _.findLastIndex(sliders, (x) => x.id === slide.id) + 1;
             nextSlide(index);
         }, 5000);
         return () => clearInterval(interval);
-    }, [slide, setSlide]);
+    }, [slide, setSlide]);*/
 
     const nextSlide = (index) => {
         setSlide(sliders[index === sliders.length ? 0 : index]);
@@ -37,7 +37,7 @@ const Slider = (props) => {
                                 Заказать доставку
                             </button>
                         </div>
-                        <img src={item.image} />
+                        <img src={item.image} className="slider-image" />
                     </div>
                 );
             })}
