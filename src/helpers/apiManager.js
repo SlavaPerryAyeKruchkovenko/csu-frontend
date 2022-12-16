@@ -9,10 +9,11 @@ export class ApiManager {
     get slides() {
         if (this._mode === API_STATUS.DEBUG) {
             return Mock.slides();
-        } else if (this._mode === API_STATUS.RELEASE) {
-        } else {
-            throw new Error('inccorect mode');
         }
+        if (this._mode === API_STATUS.RELEASE) {
+            return;
+        }
+        throw new Error('inccorect mode');
     }
     get services() {
         if (this._mode === API_STATUS.DEBUG) {

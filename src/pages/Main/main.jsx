@@ -14,7 +14,7 @@ const Main = () => {
         <div className="main-page">
             <div className="title">
                 <Header />
-                <Slider sliders={sliders} />
+                <Slider slides={sliders} />
             </div>
             <div className="information-block">
                 <h2 className="information-title">5 шагов к заявке</h2>

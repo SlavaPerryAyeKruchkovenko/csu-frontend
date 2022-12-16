@@ -2,32 +2,34 @@ import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import './slider.less';
 
-const Slider = (props) => {
-    const { sliders } = props;
+const Slider = ({ slides }) => {
+    const [slide, setSlide] = useState(slides[0]);
 
-    const [slide, setSlide] = useState(sliders[0]);
-
-    /*useEffect(() => {
+    useEffect(() => {
         const interval = setInterval(() => {
-            let index = _.findLastIndex(sliders, (x) => x.id === slide.id) + 1;
+            let index = _.findLastIndex(slides, (x) => x.id === slide.id) + 1;
             nextSlide(index);
         }, 5000);
         return () => clearInterval(interval);
-    }, [slide, setSlide]);*/
+    }, [slide, setSlide]);
 
     const nextSlide = (index) => {
-        setSlide(sliders[index === sliders.length ? 0 : index]);
+        setSlide(slides[index === slides.length ? 0 : index]);
+    };
+
+    const getClassSlider = (item) => {
+        return (
+            (slide.id === item.id
+                ? 'slide active-anim '
+                : 'slide ' + (slide.id > item.id ? 'next-slide' : '')) +
+            (item.needPadding ? '' : ' unboard-slide')
+        );
     };
     return (
         <div className="container-slider">
-            {sliders.map((item, index) => {
-                const sliderClass =
-                    (slide.id === item.id
-                        ? 'slide active-anim '
-                        : 'slide ' + (slide.id > item.id ? 'next-slide' : '')) +
-                    (item.needPadding ? '' : ' unboard-slide');
+            {slides.map((item, index) => {
                 return (
-                    <div key={item.id} className={sliderClass}>
+                    <div key={item.id} className={getClassSlider(item)}>
                         <div className="text-flow">
                             <h1 className="text-title">{item.title}</h1>
                             <span className="text-description">
@@ -43,11 +45,13 @@ const Slider = (props) => {
             })}
 
             <div className="container-dots">
-                {sliders.map((item, index) => (
+                {slides.map((item, index) => (
                     <div
                         onClick={() => nextSlide(index)}
                         key={index}
-                        className={slide.id === item.id ? 'dot active' : 'dot'}
+                        className={`dot ${
+                            slide.id === item.id ? 'active' : ''
+                        }`}
                     />
                 ))}
             </div>
