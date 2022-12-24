@@ -3,7 +3,7 @@
   color: #FFFFFF;
 
   .header-block {
-    padding: 27px 135px 27px 135px;
+    padding: 27px 9.375% 27px 9.375%;
     @media only screen and (max-width: 768px) {
       padding: 27px 14px 27px 14px;
     }
@@ -24,6 +24,11 @@
       margin-top: 16px;
     }
   }
+  @media only screen and (max-width: 576px) {
+    .left-menu {
+      margin-top: 0;
+    }
+  }
   @media only screen and (max-width: 376px){
     align-items: center;
     .left-menu {
@@ -42,6 +47,9 @@
       height: 14px;
       background: #A9C5E0;
       width: 0;
+      @media only screen and (max-width: 768px){
+        margin-left: 6vw;
+      }
       @media only screen and (max-width: 376px){
         display: none;
       }
@@ -53,6 +61,9 @@
       text-decoration: none;
       color: #A9C5E0;
       margin-left: 30px;
+      @media only screen and (max-width: 768px){
+        margin-left: 4vw;
+      }
       @media only screen and (max-width: 376px){
         display: none;
       }
@@ -80,7 +91,7 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      margin-right: 50px;
+      margin-right: 3.5vw;
       line-height: 0;
       @media only screen and (max-width: 768px) {
         margin-top: 32px;
