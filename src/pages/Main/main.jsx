@@ -5,15 +5,18 @@ import Service from '@Components/Service/service';
 import Footer from '@Components/Footer/footer.jsx';
 import './main.less';
 import { API_STATUS, ApiManager } from '@Helpers/apiManager';
+import RegisterPortal from '@Components/Portal/registerPortal';
+import RegisterForm from '@Components/RegisterForm/registerForm';
 
 const Main = () => {
     const apiManager = new ApiManager(API_STATUS.DEBUG);
     const sliders = apiManager.slides;
     const services = apiManager.services;
+    const [isOpen, setIsOpen] = React.useState(false);
     return (
         <div className="main-page">
             <div className="title">
-                <Header />
+                <Header openModal={() => setIsOpen(true)} />
                 <Slider slides={sliders} />
             </div>
             <div className="information-block">
@@ -23,6 +26,17 @@ const Main = () => {
             <div className="other-info">
                 <Footer />
             </div>
+            {isOpen ? (
+                <RegisterPortal>
+                    <RegisterForm
+                        closeModal={(e) => {
+                            setIsOpen(false);
+                        }}
+                    />
+                </RegisterPortal>
+            ) : (
+                <div />
+            )}
         </div>
     );
 };
