@@ -1,0 +1,127 @@
+.news-form{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Proxima Nova', sans-serif;
+
+  .news-description{
+    margin-top: 18px;
+  }
+  .news-title{
+    margin-top: 39px;
+  }
+  .news-text-error::placeholder{
+    color: red;
+  }
+  .text-block{
+    margin-top: 74px;
+    display: flex;
+    flex-direction: column;
+    width: 738px;
+
+    @media only screen and (max-width: 900px) {
+      width: auto;
+    }
+    .news-text{
+      font-family: 'Proxima Nova', sans-serif;
+      line-height: 20px;
+      font-weight: 400;
+      font-size: 15px;
+      resize: none;
+      outline: none;
+      border: 1px solid #23415E;
+      border-radius: 6px;
+      padding: 22px 16px;
+      height: 100px;
+    }
+    .letter-counter{
+      margin-top: 4px;
+      text-align: right;
+      font-weight: 400;
+      font-size: 12px;
+      color: #D0C9D6;
+    }
+    .red-alert{
+      color:red;
+    }
+  }
+
+  .news-text::-webkit-scrollbar {
+    width: 8px;
+  }
+  .news-text::-webkit-scrollbar-track {
+    background: rgba(208, 201, 214, 0.3);
+    margin-left: 20px;
+  }
+  .news-text::-webkit-scrollbar-thumb {
+    background-color: #D0C9D6;
+    border-radius: 6px;
+  }
+  .image-form{
+    display: flex;
+    margin-top: 30px;
+    @media only screen and (max-width: 376px){
+      flex-wrap: wrap;
+    }
+    .news-input{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .image-input{
+        display: none;
+      }
+      .image-input-text{
+        cursor: pointer;
+        padding: 3px 0;
+        font-size: 16px;
+        font-weight: 600;
+        margin-left: 16px;
+        color:#2A496B;
+      }
+    }
+    .error-text{
+      color:red;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 100px;
+      @media only screen and (max-width: 376px){
+        margin-top: 30px;
+        margin-left: 0;
+      }
+    }
+    .image-wrapper{
+      display: flex;
+      align-items: center;
+      @media only screen and (max-width: 376px){
+        margin-top: 30px;
+      }
+      .news-logo{
+        width: 34px;
+        height: 34px;
+        margin-left: 40px;
+        @media only screen and (max-width: 376px){
+          margin-left: 0;
+        }
+      }
+      .image-title{
+        margin-left: 35px;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .image-wrapper-delete{
+        width: 18px;
+        height: 18px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .image-form-without-counter{
+    margin-top: 46px;
+  }
+  .news-btn{
+    margin-top: 114px;
+    width: 240px;
+  }
+
+}

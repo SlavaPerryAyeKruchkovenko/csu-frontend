@@ -3,11 +3,14 @@ import React from 'react';
 import './header.less';
 import logo from '@Assets/images/logo.png';
 import phone from '@Assets/images/phone.svg';
-const Header = ({ openModal }) => {
+const Header = ({ openModal, isAdminPage }) => {
+    const getMenuClass = () => {
+        return `${isAdminPage ? 'admin-menu' : ''} menu`;
+    };
     return (
         <header className="header">
             <div className="header-block">
-                <nav className="menu">
+                <nav className={getMenuClass()}>
                     <div className="sub-menu left-menu">
                         <img src={logo} className="logo" />
                         <div className="separator" />

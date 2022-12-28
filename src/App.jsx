@@ -9,6 +9,7 @@ const App = () => {
         <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="*" element={<Admin />} />
         </Routes>
     );
 };

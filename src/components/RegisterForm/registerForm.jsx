@@ -25,8 +25,8 @@ const RegisterForm = ({ closeModal }) => {
                         className="close-btn"
                         onClick={closeModal}
                     />
-                    <h1 className="form-title">Авторизация</h1>
-                    <span className="form-description">
+                    <h1 className="title">Авторизация</h1>
+                    <span className="form-description description">
                         Введите логин и пароль, чтобы войти в личный кабинет
                     </span>
                     <input
@@ -40,7 +40,9 @@ const RegisterForm = ({ closeModal }) => {
                         className="form-input password-input"
                         placeholder="Пароль"
                     />
-                    <button className="submit-btn">Войти</button>
+                    <button className="submit-btn form-btn" type="submit">
+                        Войти
+                    </button>
                 </form>
             </div>
         </div>

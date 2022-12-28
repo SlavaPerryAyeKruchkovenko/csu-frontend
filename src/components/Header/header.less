@@ -38,8 +38,7 @@
   .sub-menu {
     display: flex;
     align-items: center;
-    .logo {
-    }
+    .logo {}
 
     .separator {
       margin-left: 50px;
@@ -111,6 +110,36 @@
         }
       }
     }
+  }
+}
+.admin-menu{
 
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    .wrapper {
+      flex-direction: row;
+      align-items: center;
+      .phone-link{
+        margin-top: 0;
+        align-self: inherit;
+        margin-right: 6.5vw;
+      }
+    }
+    .left-menu {
+      margin-top: 0;
+      .separator{
+        display: none;
+      }
+      .info-link{
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .wrapper {
+      .phone-link{
+        margin-right: 3vw;
+      }
+    }
   }
 }
