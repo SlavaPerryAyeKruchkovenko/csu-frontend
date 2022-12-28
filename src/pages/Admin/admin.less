@@ -1,0 +1,31 @@
+.admin-page{
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Proxima Nova", sans-serif;
+  overflow: hidden;
+
+  .header-block{
+    flex: 0 0 auto;
+    background: radial-gradient(75.49% 75.49% at 61.01% 75.77%, #376A9A 0%, #2B5276 100%);
+  }
+  .footer-block{
+    flex: 0 0 auto;
+    background: #23415E;
+  }
+  .news-block{
+    background: #FFFFFF;
+    flex: 1 0 auto;
+    padding: 135px 135px;
+    @media only screen and (max-width: 1440px){
+      padding: 135px 9.375%;
+    }
+    @media only screen and (max-width: 768px){
+      padding: 135px 15px;
+    }
+    @media only screen and (max-width: 376px){
+      padding: 96px 15px 108px 15px;
+    }
+  }
+}

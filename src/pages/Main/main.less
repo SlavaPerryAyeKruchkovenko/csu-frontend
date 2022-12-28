@@ -1,9 +1,30 @@
-.main-page__title {
-    color: blue;
-    
-}
+.main-page{
+    max-width: 100%;
+    overflow: hidden;
+    font-family: "Proxima Nova";
+    .title{
+        width: 100%;
+        background: radial-gradient(75.49% 75.49% at 61.01% 75.77%, #376A9A 0%, #2B5276 100%);
+    }
+    .other-info{
+        background: #23415E;
+    }
+    .information-block{
+        background: #FFFFFF;
+        padding: 96px 9.375% 144px 9.375%;
+        .information-title{
+            text-align: center;
+            color: #2A496B;
+            font-size: 28px;
+            line-height: 34.1px;
+            font-weight: 500;
+        }
+        @media only screen and (max-width: 768px){
+            padding: 96px 15px 96px 15px;
+        }
+        @media only screen and (max-width: 376px){
+            padding: 96px 15px 102px 15px;
+        }
+    }
 
-.main-page__cat-img {
-    width: 300px;
-    height: auto;
 }

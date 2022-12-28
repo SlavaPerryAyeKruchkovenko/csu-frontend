@@ -89,6 +89,7 @@ module.exports = {
             '@Pages': path.resolve(__dirname, './src/pages'),
             '@Components': path.resolve(__dirname, './src/components'),
             '@Constants': path.resolve(__dirname, './src/constants'),
+            '@Models': path.resolve(__dirname, './src/models'),
             '@Helpers': path.resolve(__dirname, './src/helpers'),
             '@Assets': path.resolve(__dirname, './src/assets'),
             '@Styles': path.resolve(__dirname, './src/styles'),
@@ -99,6 +100,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'index.html',
+            favicon: './src/assets/favicon/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[hash:8].css',

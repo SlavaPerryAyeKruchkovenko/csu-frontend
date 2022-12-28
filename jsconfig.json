@@ -5,6 +5,7 @@
             "@Layouts/*": ["./layouts/*"],
             "@Pages/*": ["./pages/*"],
             "@Components/*": ["./components/*"],
+            "@Models/*": ["./models/*"],
             "@Constants/*": ["./constants/*"],
             "@Helpers/*": ["./helpers/*"],
             "@Assets/*": ["./assets/*"],
