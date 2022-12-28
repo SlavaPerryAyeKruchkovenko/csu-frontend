@@ -100,6 +100,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'index.html',
+            favicon: './src/assets/favicon/favicon.ico',
         }),
         new MiniCssExtractPlugin({
             filename: '[name].[hash:8].css',

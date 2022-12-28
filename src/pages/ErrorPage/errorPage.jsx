@@ -26,7 +26,7 @@ const ErrorPage = () => {
     }, []);
     return (
         <div className="container">
-            <h1 className="first-four">4</h1>
+            <h1 className="first-four black">4</h1>
             <div className="cog-wheel1">
                 <div className="cog1">
                     <div className="top" />
@@ -52,7 +52,7 @@ const ErrorPage = () => {
                     <div className="right" />
                 </div>
             </div>
-            <h1 className="second-four">4</h1>
+            <h1 className="second-four black">4</h1>
             <p className="wrong-para">Uh Oh! Page not found!</p>
         </div>
     );
